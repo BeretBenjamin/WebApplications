@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabbed Navigation</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Hide all tab content except the first one
+  $(".tab-content").not(":first").hide();
+
+  // Handle tab clicks
+  $(".tab").click(function(){
+    // Hide all tab content
+    $(".tab-content").hide();
+    
+    // Show the content of the clicked tab
+    var tab_id = $(this).attr('data-tab');
+    $("#" + tab_id).show();
+  });
+});
+</script>
+</head>
+<body>
+
+<div class="tabs">
+  <div class="tab" data-tab="tab1">R1</div>
+  <div class="tab" data-tab="tab2">R6</div>
+  <div class="tab" data-tab="tab3">MT-10</div>
+  <div class="tab" data-tab="tab4">Mt-07</div>
+  <div class="tab" data-tab="tab5">FZ1-N</div>
+</div>
+
+<div id="tab1" class="tab-content">
+  <h2>Yamaha R1</h2>
+  <img src="image1.jpg" alt="Image 1" width="300" height="200">
+  <img src="image2.jpg" alt="Image 2" width="350" height="200">
+  <div>Text 1</div>
+  <div>Text 2</div>
+  <div>Text 3</div>
+</div>
+
+<div id="tab2" class="tab-content">
+  <h2>Yamaha R6</h2>
+  <img src="image3.jpg" alt="Image 3" width="300" height="200">
+  <img src="image4.jpg" alt="Image 4" width="200" height="200">
+  <div>Text 1</div>
+  <div>Text 2</div>
+  <div>Text 3</div>
+</div>
+
+<div id="tab3" class="tab-content">
+  <h2>Yamaha MT-10</h2>
+  <img src="image5.jpg" alt="Image 5">
+  <img src="image6.jpg" alt="Image 6">
+  <div>Text 1</div>
+  <div>Text 2</div>
+  <div>Text 3</div>
+</div>
+
+<div id="tab4" class="tab-content">
+  <h2>Yamaha MT-07</h2>
+  <img src="image7.jpg" alt="Image 7" width="300" height="200">
+  <img src="image8.jpg" alt="Image 8" width="300" height="200">
+  <div>Text 1</div>
+  <div>Text 2</div>
+  <div>Text 3</div>
+</div>
+
+<div id="tab5" class="tab-content">
+  <h2>Yamaha FZ1-N</h2>
+  <img src="image9.jpg" alt="Image 9" width="300" height="200">
+  <img src="image10.jpg" alt="Image 10" width="300" height="200">
+  <div>Text 1</div>
+  <div>Text 2</div>
+  <div>Text 3</div>
+</div>
+
+</body>
+</html>
